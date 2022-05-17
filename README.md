@@ -1,6 +1,6 @@
 # Bayesian-N-mixture
 R and BUGS code for Bayesian formulations of N-mixture models for single- and multi-season data.
-Originally formulated by Doug P. Armstrong, Claire Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from 100 m transects. Collected using a double- or triple-observer protocol (i.e. N counts = 2-3). 
+Originally formulated by Doug P. Armstrong, Claire Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from 100 m transects. Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see Herbert et al. (2014) and Herbert & Gilbert (2015). 
 
 References: 
 
