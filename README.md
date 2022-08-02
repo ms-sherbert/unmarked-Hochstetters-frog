@@ -1,8 +1,8 @@
-# Bayesian-N-mixture
+# Description
 R and BUGS code for Bayesian formulations of N-mixture models for single- and multi-season data.
 Originally formulated by Doug P. Armstrong, Claire Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from 100 m transects. Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see Herbert et al. (2014) and Herbert & Gilbert (2015). 
 
-References: 
+#References: 
 
 Herbert S. and Gilbert J. 2015: Hochstetter’s frog population health surveying, Te Paparahi, Aotea / Great Barrier Island, April-May 2015. Technical report prepared in November 2015 by EcoGecko Consultants Ltd, Wellington, and the Windy Hill Rosalie Bay Catchment Trust, Great Barrier Island.
 
