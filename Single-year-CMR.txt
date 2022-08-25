@@ -1,4 +1,4 @@
-#--- OpenBUGS script for single-tear capture-mark-recapture model of Johnson (2022) ---#
+#--- OpenBUGS script for single-year capture-mark-recapture model of Johnson (2022) ---#
 
 list(N=c(29,28,30,19,8,28,1,1,7,24,9,2,0,1,2)) #initial values
 
