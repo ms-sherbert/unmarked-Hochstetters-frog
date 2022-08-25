@@ -1,10 +1,11 @@
 # Description
-This repository is still in development as at 25/08/2022.
 
 R and BUGS code for Bayesian formulations of hierarchical models for single- and multi-season data collected by multiple observers on the same day.
 Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from 100 m transects. Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see Herbert et al. (2014) and Herbert & Gilbert (2015). 
 
-References: 
+**Note**: This repository is still in development as at 25/08/2022.
+
+## References: 
 
 Herbert S. and Gilbert J. 2015: Hochstetter’s frog population health surveying, Te Paparahi, Aotea / Great Barrier Island, April-May 2015. Technical report prepared in November 2015 by EcoGecko Consultants Ltd, Wellington, and the Windy Hill Rosalie Bay Catchment Trust, Great Barrier Island.
 
