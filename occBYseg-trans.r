@@ -1,6 +1,5 @@
 #--- Transform data into observed presence by transect segment ----#
 
-
 # remeber to set working directory to where your data are, e.g.
 # setwd("D:/R_outputs")
 # If you need to check location of working directory, use: 
