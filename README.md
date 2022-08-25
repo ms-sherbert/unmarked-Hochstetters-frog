@@ -7,10 +7,11 @@ Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herb
 
 ## Repository contents:
 
-`Single-year-N-mixture.txt`: OpenBUGS script for Bayesian formulation of Royle (2004) single-year N-mixture model from Johnson (2022)
+`Single-year-N-mixture.txt` OpenBUGS script for Bayesian formulation of Royle (2004) single-year N-mixture model from Johnson (2022)
 
-`Single-year-CMR.txt`: OpenBUGS script for Bayesian formulation of single-year capture-mark-recapture model from Johnson (2022)
+`Single-year-CMR.txt` OpenBUGS script for Bayesian formulation of single-year capture-mark-recapture model from Johnson (2022)
 
+`Code for single survey with spatial replicates.R` R code for calculating the abundance of a single-occasion count of frogs in a single 100-metre transect. For each frog encountered, its position in the transect was recorded as the distance from the startpoint (i.e. a number between 0m and 100 m). The unit of replication is spatial, rather than temporal, where each count is the number of frogs in each 10-metre section of the transect. Based on R code provided in Royle & Dorazio (2008). 
 
 ## References: 
 
