@@ -9,6 +9,8 @@ Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herb
 
 `All_captures_2012-2022.csv` Frog capture data from the 2012, 2015, and 2021 surveys. 
 
+`rep-count-trans.r` R script for transforming the frog capture data from all years into a repeated count format.
+
 `Single-year-N-mixture.txt` OpenBUGS script for Bayesian formulation of Royle (2004) single-year N-mixture model from Johnson (2022).
 
 `Single-year-CMR.txt` OpenBUGS script for Bayesian formulation of single-year capture-mark-recapture model from Johnson (2022).
