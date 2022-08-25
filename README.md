@@ -5,6 +5,11 @@ Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herb
 
 **Note**: This repository is still in development as at 25/08/2022.
 
+##Repository contents:
+
+`Single-year-N-mixture.txt`: OpenBUGS script for Bayesian forumualtion of Royle (2004) single-year N-mixture model
+`Single-year-CMR.txt`: OpenBUGS script for Bayesian forumualtion of single-year capture-mark-recapture model
+
 ## References: 
 
 Herbert S. and Gilbert J. 2015: Hochstetter’s frog population health surveying, Te Paparahi, Aotea / Great Barrier Island, April-May 2015. Technical report prepared in November 2015 by EcoGecko Consultants Ltd, Wellington, and the Windy Hill Rosalie Bay Catchment Trust, Great Barrier Island.
