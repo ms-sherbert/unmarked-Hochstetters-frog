@@ -5,10 +5,11 @@ Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herb
 
 **Note**: This repository is still in development as at 25/08/2022.
 
-##Repository contents:
+## Repository contents:
 
-`Single-year-N-mixture.txt`: OpenBUGS script for Bayesian forumualtion of Royle (2004) single-year N-mixture model
-`Single-year-CMR.txt`: OpenBUGS script for Bayesian forumualtion of single-year capture-mark-recapture model
+`Single-year-N-mixture.txt`: OpenBUGS script for Bayesian formulation of Royle (2004) single-year N-mixture model from Johnson (2022)
+`Single-year-CMR.txt`: OpenBUGS script for Bayesian formulation of single-year capture-mark-recapture model from Johnson (2022)
+
 
 ## References: 
 
