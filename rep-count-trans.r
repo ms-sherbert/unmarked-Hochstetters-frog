@@ -1,7 +1,9 @@
 ##--- Transform data into repeated counts by transect  ---#
 
-# set working directory to where your data are
-setwd("D:/R_outputs")
+# remeber to set working directory to where your data are, e.g.
+# setwd("D:/R_outputs")
+# If you need to check location of working directory, use: 
+# getwd()
 
 data <- read.csv("All_captures_2012-2022.csv",header=T)
 attach(data)
