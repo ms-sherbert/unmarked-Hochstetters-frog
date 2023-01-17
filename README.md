@@ -1,9 +1,9 @@
 # Description
 
-R and OpenBUGS code for Bayesian formulations of hierarchical models for single- and multi-season data collected by multiple observers on the same day. 
+R and BUGS / JAGS code for Bayesian formulations of hierarchical models for single- and multi-season data collected by multiple observers on the same day. 
 Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from fifteen 100 m transects in 2012, 2015, and 2021. Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see Herbert et al. (2014) and Herbert & Gilbert (2015). 
 
-**Note**: This repository is still in development as at 14/11/2022.
+**Note**: This repository is still in development as at 17/01/2023.
 
 ## Repository contents:
 
