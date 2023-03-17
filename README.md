@@ -3,8 +3,6 @@
 R and BUGS / JAGS code for Bayesian formulations of hierarchical models for single- and multi-season data collected by multiple observers on the same day. 
 Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from fifteen 100 m transects in 2012, 2015, and 2021. Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see Herbert et al. (2014) and Herbert & Gilbert (2015). 
 
-**Note**: This repository is still in development as at 17/01/2023.
-
 ## Repository contents:
 
 `All_captures_2012-2022.csv` Frog capture data from the 2012, 2015, and 2021 surveys. 
@@ -13,9 +11,7 @@ Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herb
 
 `occBYseg-trans.r` R script for transforming `All_captures_2012-2022.csv` into a repeated detection/non-detection format (split by 10-metre transect segments) for the occupancy modelling done by Johnson (2022). 
 
-`Single-year-N-mixture.txt` OpenBUGS script for Bayesian formulation of Royle (2004) single-year N-mixture model from Johnson (2022).
 
-`Single-year-CMR.txt` OpenBUGS script for Bayesian formulation of single-year capture-mark-recapture model from Johnson (2022).
 
 `Code for single survey with spatial replicates.R` R code for calculating the abundance of a single-occasion count of frogs in a single 100-metre transect. For each frog encountered, its position in the transect was recorded as the distance from the startpoint (i.e. a number between 0m and 100 m). The unit of replication is spatial, rather than temporal, where each count is the number of frogs in each 10-metre section of the transect. Based on R code provided in Royle & Dorazio (2008). 
 
