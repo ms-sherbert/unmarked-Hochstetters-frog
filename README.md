@@ -29,6 +29,6 @@ Herbert S. and Gilbert J. (2015) Hochstetter’s frog population health surveyin
 
 Herbert S., Melzer S., Gilbert J., and Jamieson H. (2014) Relative abundance and habitat use of Hochstetter’s frog (*Leiopelma hochstetteri*) in northern Great Barrier Island: a snapshot from 2012. *BioGecko 2*: 12-21. Reference available here: https://www.researchgate.net/profile/Sarah-Herbert-5
 
-Johnson, C. E. (2022) A comparison of approaches for estimating Hochstetter's frog (*Leiopelma hochstetteri*) abundance. MSc thesis, Massey University, Palmerston North, New Zealand. 
+Johnson, C. E. (2022) A comparison of approaches for estimating Hochstetter's frog (*Leiopelma hochstetteri*) abundance. MSc thesis, Massey University, Palmerston North, New Zealand. Reference available here: https://mro.massey.ac.nz/handle/10179/17863
 
 Royle, J. A. and Dorazio, R. M. (2008) *Hierarchical Modeling and Inference in Ecology: The Analysis of Data from Populations, Metapopulations and Communities*. Academic Press, London, UK. 
