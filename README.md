@@ -1,7 +1,7 @@
 # Description
 
-Code and data repository for the manuscript entitled: Johnson CE, Herbert SM, Cookson H, Gilbert J, and Armstrong DP (in prep.) 
-A comparison of analytical methods for estimating abundance of Hochstetter's frogs.
+Code and data repository for the manuscript entitled: "Johnson CE, Herbert SM, Cookson H, Gilbert J, and Armstrong DP.
+A comparison of analytical methods for estimating abundance of Hochstetter's frogs."
 Submitted to New Zealand Journal of Ecology in 2023. 
 
 R code for data manipulation and OpenBUGS code for Bayesian formulations of hierarchical models for single- and multi-season data collected by multiple observers on the same day. 
@@ -17,6 +17,7 @@ Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see
 `occBYseg-trans.r` contains R script for transforming `Appendix_1A_raw_data.csv` into a repeated detection/non-detection format (split by 10-metre transect segments) for occupancy modeling in OpenBUGS. 
 
 Files entitled `Appendix_1...` contain raw and transformed count and occupancy data for Hochstetter’s frogs for fifteen 100-m transects at Te Paparahi, Aotea, New Zealand.
+
 Files entitled `Appendix_2...` contain OpenBUGS code for closed-population mark-recapture (CMR), N-mixture, and occupancy models fitted to data for Hochstetter’s frogs at Te Paparahi, Aotea, New Zealand.
 
 `fun-w-spatial-reps.R` Additional R code for calculating the abundance of a single-occasion count of frogs in a single 100-metre transect (not used in paper, but included here just for fun). 
