@@ -5,7 +5,7 @@
 # If you need to check location of working directory, use: 
 # getwd()
 
-data <- read.csv("All_captures_2012-2022.csv",header=T)
+data <- read.csv("Appendix_1A_raw_data.csv",header=T)
 attach(data)
 
 n.segments <- 10	# no. of segments each transect divided into
@@ -19,6 +19,8 @@ segment.presence <- 1*(segment.counts > 0)
 
 write(segment.counts,file="segment.counts.txt",3)
 write(segment.presence,file="segment.presence.txt",3)
+
+#With this script, you'll need to fill in all the NAs by hand in the 2x outputs files
 
 detach(data)
 rm(list=ls()) #Just to keep your R environment tidy ;)
