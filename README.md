@@ -1,6 +1,6 @@
 # Description
 
-Code and data repository for the manuscript entitled: "Johnson CE, Herbert SM, Cookson H, Gilbert J, and Armstrong DP.
+Code and data repository for the manuscript entitled: "Johnson CE, Herbert SM, Gilbert J, and Armstrong DP.
 A comparison of analytical methods for estimating abundance of Hochstetter's frogs."
 Submitted to New Zealand Journal of Ecology in 2023. 
 
