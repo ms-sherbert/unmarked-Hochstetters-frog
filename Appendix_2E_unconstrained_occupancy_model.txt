@@ -9,28 +9,35 @@ Model {
 
 	# Detection model
 	a.p ~ dnorm(0,1) 		# logit of average detection probability
-	s.j.p ~ dunif(0,1)		# SD among surveys in logit p 
-	tau.j.p <- pow(s.j.p,-2)   	# convert to precision
+	s.j.p ~ dunif(0,1)     	 # SD among surveys in logit p 
+	tau.j.p <- pow(s.j.p,-2)   # convert to precision
 
 	for (j in 1:n.surveys) { 	# for each survey...
 		re.j.p[j] ~ dnorm(0, tau.j.p)		# assign nightly random effect on detection prob.
-		logit(p[j]) <- a.p+re.j.p[j]		# calc. prob of of 1+ frog being detected if segment occupied
+		logit(p[j]) <- a.p+re.j.p[j]			# calc. prob of of 1+ frog being detected if segment occupied
 	}
 
 	# Occupancy model
 	for (i in 1:n.transect.years) { 	# for each transect for each year...
-		a.N[i] ~ dnorm(0,0.1)			# prior for expected value of log(N)
+		a.N[i] ~ dnorm(0,0.1)		# prior for expected value of log(N)
 		log(mu[i]) <- a.N[i]			# convert to untransformed N
 		N[i] ~ dpois(mu[i])			# sample actual of N from expected value for N				
-		p.present[i] <- 1-exp(-N[i]/10)		# prob. of any 10m segment on the transect being occupied
+		p.present[i] <- 1-exp(-N[i]/10)	# prob. of any 10m segment on the transect being occupied
 	}
 	
 	for (i in 1:n.segments) {   	# for each 10-m segment of each transect in each survey...
-		present[i] ~ dbern(p.present[transect.year[i]]) # sample occupancy of segment based on pr. occupancy
-		for (j in 1:n.surveys) {			# for each survey of segment...
-			p.detect[i,j] <- present[i]*p[j]		# prob. of 1+ frogs being seen on segment in survey j
-			detected[i,j] ~ dbern(p.detect[i,j]) 		# sample whether frog(s) detected based on p.seen
+		present[i] ~ dbern(p.present[transect.year[i]])  # sample occupancy of segment based on pr. occupancy
+		for (j in 1:n.surveys) {					# for each survey of segment...
+			p.detect[i,j] <- present[i]*p[j]			# prob. of 1+ frogs being seen on segment in survey j
+			detected[i,j] ~ dbern(p.detect[i,j]) # sample whether frog(s) detected based on p.seen
+			detected.new[i,j] ~ dbern(p.detect[i,j]) # # for posterior predictive check
 		}
 	}	
 	
+	# this bit adds up the number of segments where a frog was found in each transect, i.e., 0-10
+	for (i in 1:n.transect.years) { 	
+		for (j in 1:n.surveys) {					
+			n.detected[i,j] <- sum(detected.new[(i-1)*10+1:(i-1)*10+10,j])
+		}
+	}
 }

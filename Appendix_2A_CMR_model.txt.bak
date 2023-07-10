@@ -3,22 +3,19 @@ Appendix 2A: OpenBUGS code for the closed-population capture-mark-recapture (CMR
 This model was fitted only to the 2021 data because frog positions were not recorded in other years
 
 Initial values: these need to be at or above the minimum number on each transect
-They needed to be adusted further for posterior predictions; I first set them at the median values
-from the output, then raised some of the low values as needed
-list(N=c(100,113,113,65,28,66,2,3,23,76,33,5,1,2,3))
-
+list(N=c(60,68,68,39,17,40,1,2,14,46,20,3,0,1,2))
 
 Model {
 
 	# Detection model 
-	a.p ~ dnorm(0,1)			# intercept of logit of detection probability (p)
-	b.B ~ dnorm(0,1)			# effect of capture on detection probability
-	s.j.p ~ dunif(0,1)			# SD among surveys in logit p
+	a.p ~ dnorm(0,1)		# intercept of logit of detection probability (p)
+	b.B ~ dnorm(0,1)		# effect of capture on detection probability
+	s.j.p ~ dunif(0,1)		# SD among surveys in logit p
 	tau.j.p <- pow(s.j.p,-2)	# convert SD to precision
 
-	for (j in 1:n.surveys) {				# for each survey (1, 2 or 3)...
+	for (j in 1:n.surveys) {		# for each survey (1, 2 or 3)...
 		re.j.p[j] ~ dnorm(0, tau.j.p)	# assign survey random effect on detection probability
-		logit(c[j]) <- a.p+re.j.p[j]	 # calc. prob of first capture
+		logit(c[j]) <- a.p+re.j.p[j]	# calc. prob of first capture
 		logit(p[j]) <- logit(c[j])+b.B	# calc. prob of recapture
 	}
 
@@ -27,19 +24,17 @@ Model {
 
 		a.N[i] ~ dnorm(0,0.1) 	# prior for log of expected N
 		log(mu[i]) <- a.N[i]  	# convert to untransformed N
-		N[i] ~dpois(mu[i])		# sample actual of N from expected value for N
+		N[i] ~dpois(mu[i])	# sample actual of N from expected value for N
 
 		U[i,1] <- N[i]				# initially all individuals are unmarked
 		M[i,1] <- 0				# and no individuals are marked
 
 		for (j in 1: n.surveys) {		# for each sampling occasion
 			u[i,j] ~ dbin(c[j],U[i,j])		# sample no. new found from no. unmarked present
-			u.new[i,j] ~ dbin(c[j],U[i,j])		# for posterior predictive check
 			m[i,j] ~ dbin(p[j],M[i,j])		# sample no. marked found from no. marked present
 			U[i,j+1] <- U[i,j]-u[i,j]
 			M[i,j+1] <- M[i,j]+u[i,j]
 		}
-
 	}	
 
 }

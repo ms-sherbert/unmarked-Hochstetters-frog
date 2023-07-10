@@ -1,4 +1,4 @@
-Appendix 2D: OpenBUGS code for the multi-year single-count index model
+Appendix 2D: OpenBUGS code for the time-trend single-count model
 
 This is similar to the time-trend N-mixture model, but only the first surveys are used.
 Consequently the model only estimates the mean first count rather than estimating N.
@@ -6,7 +6,7 @@ Consequently the model only estimates the mean first count rather than estimatin
 Model {	
 
 	a.N ~ dnorm(0,1)		# prior for log of expected count for average transect
-	b.year ~ dnorm(0,1)	# average annual change in log count
+	b.year ~ dnorm(0,1)		# average annual change in log count
 	s.trans.N ~ dunif(0,5)		# SD in log expected count among transects
 	tau.trans.N <-pow(s.trans.N,-2)	# convert to precision
 		
@@ -17,6 +17,10 @@ Model {
 	for (i in 1:n.rows) {			# for each transect for each year...
 		log(mu[i]) <- a.N + b.year*(year[i]-2012) + re.trans.N[transect[i]]	# calculate expected count 
 		n[i,1] ~ dpois(mu[i])		# sample number found from no expected
-		n.new[i,1] ~ dpois(mu[i])		# for posterior predictive check
 	}
+
+	# Derived parameters 
+	lambda <- exp(b.year)   	# proportional annual change in abundance 
+	lambda9 <- pow(lambda,9)   	# change in abdundance over 9 year timeframe 
+
 }
