@@ -12,7 +12,7 @@ SC<-read.csv("Appendix_4E_Single_count_2012-21.csv",header=T)
 UncOcc<-read.csv("Appendix_4F_Unconst_occupancy_2012-21.csv",header=T)
 TTOcc<-read.csv("Appendix_4G_Time-trend_occupancy_2012-21.csv",header=T)
 
-Syear<-cbind(CMR2021[1:15,7],Nmix2021[1:15,7])
+Syear<-cbind(CMR2021[1:15,7],Nmix2021[1:15,7]) #comparing median model estimates
 colnames(Syear)<-c("CMR","Nmix")
 
 shapiro.test(log(Syear[,1]+1)) #approximately log normal
@@ -37,11 +37,17 @@ cor.test(Myear[,2],Myear[,3],method="spearman") #TT Nmix vs single count Poisson
 cor.test(Myear[,1],Myear[,4],method="spearman") #Unconstrained Nmix vs. unconstrained occupancy
 cor.test(Myear[,2],Myear[,5],method="spearman") #TT Nmix vs. TT occupancy
 
-cor.test(Myear[,1],Myear[30:44,6],method="pearson") #N from unconstrained Nmix vs. derived from unconstrained occupancy
+cor.test(Myear[,1],Myear[,6],method="spearman") #N from unconstrained Nmix vs. derived from unconstrained occupancy
+
+#---Visual check of unconstrained Nmix and occupancy outputs (i.e. re-constructs Fig. 6 (black dots) without error bars plus 2015 and 2012 dots) ---# 
 
 par(mfrow=c(2,1))
-plot(Myear[30:44,1],Myear[30:44,4],xlab="N estimates from N-mixture",ylab="Occupancy estimates",main="A")
-plot(Myear[30:44,1],Myear[30:44,6],xlab="N estimates from N-mixture",ylab="N estimates dervied from occupancy",main="B")
+plot(Myear[30:44,1],Myear[30:44,4],xlab="N estimates from N-mixture",ylab="Occupancy estimates",pch=16,main="A")
+points(Myear[1:14,1],Myear[1:14,4],col="green",pch=16)
+points(Myear[15:29,1],Myear[15:29,4],col="blue",pch=16)
+plot(Myear[30:44,1],Myear[30:44,6],xlab="N estimates from N-mixture",ylab="N estimates dervied from occupancy",main="B",pch=16)
+points(Myear[1:14,1],Myear[1:14,6],col="green",pch=16)
+points(Myear[15:29,1],Myear[15:29,6],col="blue",pch=16)
 par(mfrow=c(1,1))
 
 #It's weird that Spearman's test indicates such high correlation, but I suspect that's from the use of ranking. 
