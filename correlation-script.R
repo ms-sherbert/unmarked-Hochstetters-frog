@@ -1,8 +1,7 @@
 #--- Correlation script ---#
 
-setwd("C:/Users/herbersa/OneDrive - Victoria University of Wellington - STAFF/Claires thesis pub")
+setwd("C:/Repositories/unmarked-Hochstetters-frog")
 getwd()
-#[1] "C:/Users/herbersa/OneDrive - Victoria University of Wellington - STAFF/Claires thesis pub"
 
   
 CMR2021<-read.csv("Appendix_4A_CMR_2021.csv",header=T)
@@ -13,23 +12,23 @@ SC<-read.csv("Appendix_4E_Single_count_2012-21.csv",header=T)
 UncOcc<-read.csv("Appendix_4F_Unconst_occupancy_2012-21.csv",header=T)
 TTOcc<-read.csv("Appendix_4G_Time-trend_occupancy_2012-21.csv",header=T)
 
-Syear<-cbind(CMR2021[1:15,3],Nmix2021[1:15,3])
+Syear<-cbind(CMR2021[1:15,7],Nmix2021[1:15,7])
 colnames(Syear)<-c("CMR","Nmix")
 
-shapiro.test(log(Syear[,1])) #is log normal
-shapiro.test(log(Syear[,2])) #is log normal
+shapiro.test(log(Syear[,1]+1)) #approximately log normal
+shapiro.test(log(Syear[,2]+1)) #approximately log normal
 
-cor.test(Syear[,1],Syear[,2],method="spearman") #data are lognormal, but used Spearman test so more comparable to other tests
+cor.test(Syear[,1],Syear[,2],method="spearman") #data are nearly lognormal, but used Spearman test so more comparable to other tests
 
-Myear<-cbind(UncNmix[2:45,4],TTNmix[2:45,4],SC[2:45,4],UncOcc[52:95,4],TTOcc[52:95,4],UncOcc[2:45,4],TTOcc[2:45,4])
+Myear<-cbind(UncNmix[2:45,4],TTNmix[2:45,8],SC[2:45,8],UncOcc[51:94,8],TTOcc[54:97,8],UncOcc[2:45,8],TTOcc[2:45,8]) #used medians for abundance, means for occupancy
 colnames(Myear)<-c("UncNmix","TTNmix","SC","UncOcc","TTOcc","UncOcc.N","TTOcc.N")
 
-shapiro.test(log(Myear[,1])) #not log normal or normal
-shapiro.test(log(Myear[,2])) #not log normal or normal
-shapiro.test(log(Myear[,3])) #not log normal or normal
-shapiro.test(log(Myear[,4])) #not log normal or normal
-shapiro.test(log(Myear[,5])) #not log normal or normal
-shapiro.test(log(Myear[,6])) #Log normal
+shapiro.test(log(Myear[,1]+1)) #not log normal or normal
+shapiro.test(log(Myear[,2]+1)) #not log normal or normal
+shapiro.test(log(Myear[,3]+1)) #not log normal or normal
+shapiro.test(log(Myear[,4]+1)) #not log normal or normal
+shapiro.test(log(Myear[,5]+1)) #not log normal or normal
+shapiro.test(log(Myear[,6]+1)) #not log normal or normal
 
 cor.test(Myear[,1],Myear[,2],method="spearman") #TT vs. Unconstrained Nmix
 cor.test(Myear[,1],Myear[,3],method="spearman") #Unconstrained Nmix vs single count Poisson model
