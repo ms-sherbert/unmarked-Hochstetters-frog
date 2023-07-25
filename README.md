@@ -1,7 +1,7 @@
 # Description
 
 Code and data repository for the manuscript entitled: "Johnson CE, Herbert SM, Gilbert J, and Armstrong DP.
-A comparison of analytical methods for estimating abundance of Hochstetter's frogs."
+A comparison of analytical methods for estimating abundance of unmarked Hochstetter's frogs."
 Submitted to New Zealand Journal of Ecology in 2023. 
 
 R code for data manipulation and OpenBUGS code for Bayesian formulations of hierarchical models for single- and multi-season data collected by multiple observers on the same day. 
