@@ -20,6 +20,8 @@ Files entitled `Appendix_1...` contain raw and transformed count and occupancy d
 
 Files entitled `Appendix_2...` contain OpenBUGS code for closed-population mark-recapture (CMR), N-mixture, and occupancy models fitted to data for Hochstetter’s frogs at Te Paparahi, Aotea, New Zealand.
 
+`correlation-script.R` contains code used for the pairwise correlation tests of model outputs throughout the manuscript. 
+
 `fun-w-spatial-reps.R` Additional R code for calculating the abundance of a single-occasion count of frogs in a single 100-metre transect (not used in paper, but included here just for fun). 
 For each frog encountered, its position in the transect was recorded as the distance from the startpoint (i.e. a number between 0m and 100 m). The unit of replication is spatial, rather than temporal, where each count is the number of frogs in each 10-metre section of the transect. Based on R code provided in Royle & Dorazio (2008). 
 
