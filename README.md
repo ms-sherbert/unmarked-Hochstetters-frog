@@ -8,6 +8,8 @@ R code for data manipulation and OpenBUGS code for Bayesian formulations of hier
 Originally formulated by Doug P. Armstrong, Claire E. Johnson, and Sarah M. Herbert for analysis of Hochstetter's frog repeated count data collected from fifteen 100 m transects in 2012, 2015, and 2021. 
 Collected using a double- or triple-observer protocol (i.e. N counts = 2-3); see Herbert et al. (2014), Herbert & Gilbert (2015), and Johnson (2022). 
 
+This code can be cited by its DOI: [![DOI](https://zenodo.org/badge/493200985.svg)](https://zenodo.org/doi/10.5281/zenodo.10836283)
+
 ## Repository contents:
 
 `Appendix_1A_raw_data.csv` contains the raw frog capture data from the 2012, 2015, and 2021 surveys. 
